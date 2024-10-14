@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --primary: #ead8b1;
+  --secondary: #3a6d8c;
+  --nuteral: #6a9ab0;
+  --cta: #001f3f;
+  --error: #cc3300;
+  --error-light: #ff9966;
+  --warning: #ffcc00;
+  --success: #339900;
+  --success-light: #99cc33;
+  --box-shadow-action-bar: 0px 0px 50px 0px rgba(0, 0, 0, 100%);
+}
+.rsw-editor {
+  border-radius: 0;
+  flex: 1;
+}
+body {
+  height: 100vh;
+  background-color: var(--nuteral);
+  padding: 40px;
+  position: relative;
+  background-image: repeating-linear-gradient(
+      to right,
+      transparent 0 50px,
+      #fff1 50px 51px
+    ),
+    repeating-linear-gradient(to bottom, transparent 0 50px, #fff1 50px 51px);
+}
+
+.note-header .note-header-left .add-note:hover {
+  color: var(--white);
+}
+.note-header .note-header-left .add-note {
+  background: transparent;
+  color: var(--primary);
+  box-shadow: none;
+}
+.add-note {
+  background: var(--cta);
+  border: none;
+  color: var(--primary);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: var(--box-shadow-action-bar);
+}
+.add-note:hover {
+  background: var(--primary);
+  color: var(--cta);
+  transition: 0.2s ease-in;
+}
+
+.delete-note {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.delete-note:hover {
+  /* background: var(--primary); */
+  color: var(--white);
+  transition: 0.2s ease-in;
+}
+
+.note-container {
+  /* min-height: 200px;
+  min-width: 300px; */
+  background-color: var(--primary);
+  border-radius: 4px;
+  box-shadow: 0px 0px 40px -4px rgba(0, 0, 0, 100%);
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.note-header {
+  background-color: var(--ck-color-toolbar-background);
+  /* border-radius: 20px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-footer {
+  background: var(--cta);
+  display: flex;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.icon-btn:hover {
+  background: var(--primary);
+  color: var(--cta);
+  transition: 0.2s ease-in;
+}
+
+.editor {
+  min-height: 200px;
+  min-width: 300px;
+  border: none;
+  color: var(--cta);
+  background: var(--primary);
+  padding: 10px;
+}
+
+.editor:focus-visible {
+  outline: none;
+}
+
+.selected {
+  background-color: var(--success-light);
+  color: var(--primary);
+}
+
+.color-component-container {
+  background: var(--white);
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  border-radius: 10px;
+  width: 150px;
+  box-shadow: var(--box-shadow-action-bar);
+}
+
+.color-component-color {
+  height: 20px;
+  width: 20px;
+  background: var(--ck-color-toolbar-background);
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.color-selected {
+  /* box-shadow: var(--box-shadow-action-bar); */
+  outline: 1px dashed var(--black);
+  outline-offset: 2px;
+}
+
+.spinning-loader {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+}
